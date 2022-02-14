@@ -26,7 +26,7 @@
               <a class="navigation-link navigation-link-current" href="hotels.html">Гостиницы</a>
             </li>
           </ul>
-          <ul class="navigation-list">
+          <ul class="navigation-list navigation-list-user">
             <li class="navigation-user">
               <a href="">
                 <span class="visually-hidden">Поиск</span>
@@ -44,8 +44,7 @@
           </ul>
         </nav>
       </header>
-      <main class="main-inner">
-
+      <main class="main-container main-inner">
         <section class="catalog-hotels">
           <header class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -62,10 +61,10 @@
           </header>
 
           <div class="catalog-hotels-filter">
-            <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
+            <h2 class="visually-hidden" hidden>Список гостиниц с фильтрами</h2>
             <!-- Форма-фильтр -->
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-              <fieldset class="catalog-filter-group">
+              <fieldset class="catalog-filter-infrastructure">
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
@@ -89,7 +88,7 @@
                 </ul>
               </fieldset>
 
-              <fieldset class="catalog-filter-group">
+              <fieldset class="catalog-filter-type">
                 <legend class="catalog-filter-title">Тип жилья:</legend>
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
@@ -113,11 +112,13 @@
                 </ul>
               </fieldset>
 
-              <fieldset class="catalog-filter-group">
+              <fieldset class="catalog-filter-price">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               </fieldset>
-              <button class="button button-blue" type="submit">Применить</button>
-              <button class="button button-reset" type="reset">Сбросить</button>
+              <div class="catalog-filter-button">
+                <button class="button button-filter button-blue" type="submit">Применить</button>
+                <button class="button button-reset" type="reset">Сбросить</button>
+              </div>
             </form>
           </div>
         </section>
@@ -236,81 +237,81 @@
 
         <!-- Постраничный переход -->
         <button class="button button-blue pagination-show-more" type="button">Загрузить ещё</button>
-        <ol class="pagination">
-          <li class="pagination-item">
-            <a class="button button-blue pagination-link pagination-current">1</a>
-          </li>
-          <li class="pagination-item">
-            <a class="button button-blue pagination-link" href="#">2</a>
-          </li>
-          <li class="pagination-item">
-            <a class="button button-blue pagination-link" href="#">3</a>
-          </li>
-          <li class="pagination-item">
-            <a class="button button-blue pagination-link" href="#">4</a>
-          </li>
-          <li class="pagination-item">
-            <a class="button button-blue pagination-link" href="#">...</a>
-          </li>
-          <li class="pagination-item">
-            <a class="button button-blue pagination-link" href="#">10</a>
-          </li>
-        </ol>
-        <label>Гостиниц на странице:
-          <select  class="select-control" name="Гостиниц на странице:">
-            <option value="4">4</option>
-            <option value="8">8</option>
-            <option value="12">12</option>
-          </select>
-        </label>
+        <div class="pagination-inner">
+          <ol class="pagination">
+            <li class="pagination-item">
+              <a class="button button-blue pagination-link pagination-current">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="button button-blue pagination-link" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="button button-blue pagination-link" href="#">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="button button-blue pagination-link" href="#">4</a>
+            </li>
+            <li class="pagination-item">
+              <a class="button button-blue pagination-link" href="#">...</a>
+            </li>
+            <li class="pagination-item">
+              <a class="button button-blue pagination-link" href="#">10</a>
+            </li>
+          </ol>
+          <label>Гостиниц на странице:
+            <select  class="select-control" name="Гостиниц на странице:">
+              <option value="4">4</option>
+              <option value="8">8</option>
+              <option value="12">12</option>
+            </select>
+          </label>
+        </div>
         <!-- Форма для подписки -->
-        <section class="newsletter">
-          <div class="newsletter-inner">
-            <h2 class=newsletter-title>Подпишитесь на рассылку</h2>
-            <p class="newsletter-description">Только полезная информация и никакого спама,<br>
-              честное бойскаутское!</p>
-            <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-              <label for="newsletter-email">Email</label>
-              <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
-              <button class="button button-blue button-newsletter" type="submit">
-                <!--<span class="subscribe">Подписаться</span>-->Подписаться
-              </button>
-            </form>
-          </div>
+        <section class="newsletter newsletter-inner">
+          <h2 class=newsletter-title>Подпишитесь на рассылку</h2>
+          <p class="newsletter-description">Только полезная информация и никакого спама,<br>
+            честное бойскаутское!</p>
+          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label for="newsletter-email">Email</label>
+            <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
+            <button class="button button-blue button-newsletter" type="submit">Подписаться</button>
+          </form>
         </section>
       </main>
       <!-- Подвал -->
       <footer class="page-footer">
-        <section class="footer-social">
-          <h2 class="visually-hidden">Социальные сети</h2>
-          <ul class="footer-social-list">
-            <li class="footer-social-item">
-              <a class="button" href="#">
-                <span class="visually-hidden">Твиттер</span>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a class="button" href="#">
-                <span class="visually-hidden">ВКонтакте</span>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a class="button" href="#">
-                <span class="visually-hidden">Инстаграм</span>
-              </a>
-            </li>
-          </ul>
-          <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a></p>
-        </section>
-        <section class="footer-contacts">
-          <h2 class="visually-hidden">Контакты</h2>
-          <address class="footer-contacts">
-            <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-          </address>
-        </section>
-        <a class="footer-logo" href="https://htmlacademy.ru/">
-          <img class="footer-logo-htmlacademy" src="images/logo_htmlacademy.svg" alt="Логотип html academy" width="115" height="34">
-        </a>
+        <div class="page-footer-container">
+          <section class="footer-social">
+            <h2 class="visually-hidden" hidden>Социальные сети</h2>
+            <ul class="footer-social-list">
+              <li class="footer-social-item">
+                <a class="button" href="#">
+                  <span class="visually-hidden">Твиттер</span>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a class="button" href="#">
+                  <span class="visually-hidden">ВКонтакте</span>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a class="button" href="#">
+                  <span class="visually-hidden">Инстаграм</span>
+                </a>
+              </li>
+            </ul>
+            <!-- <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">html academy</a></p> -->
+          </section>
+          <section class="footer-contacts">
+            <h2 class="visually-hidden" hidden>Контакты</h2>
+            <address class="footer-contacts">
+              <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            </address>
+          </section>
+          <a class="footer-logo" href="https://htmlacademy.ru/">
+           <img class="footer-logo-htmlacademy" src="images/logo_htmlacademy.svg" alt="Логотип html academy" width="115" height="34">
+          </a>
+        </div>
       </footer>
     </div>
   </body>
