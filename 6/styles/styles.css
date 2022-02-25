@@ -553,7 +553,7 @@ h4 {
   width: 48px;
   height: 48px;
   box-sizing: border-box;
-  border: 2px solid #000000;
+  /* border: 2px solid #000000; */
 }
 
 .sorting .button:not(:last-child) {
@@ -566,6 +566,7 @@ h4 {
 }
 
 .meets {
+  margin: 0;
   font-size: 30px;
   line-height: 39px;
   font-weight: 700;
@@ -629,7 +630,6 @@ h4 {
   width: 1057px;
   margin: 0 auto;
   flex-wrap: wrap;
-  margin-bottom: ;
 }
 
 .pagination-show-more {
