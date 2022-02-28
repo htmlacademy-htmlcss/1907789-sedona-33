@@ -128,7 +128,6 @@ h4 {
   padding-left: 0;
   padding-right: 0;
   margin: 0 17px -1px;
-  /* можно сделать через псевдоэлемент, но нужно ссылку оборачивать еще в один элемент */
 }
 
 .navigation-user .navigation-link {
@@ -218,17 +217,18 @@ h4 {
   min-height: 384px;
 }
 
-.advantages-item:nth-child(4) {
+.advantages-item-box {
+  width: 1200px;
+}
+
+.advantages-item:nth-child(even) {
   background-color: #83B3D333;
 }
 
-.advantages-item:nth-child(3) {
+.advantages-item:nth-child(odd) {
   background: #83B3D31F;
 }
 
-.advantages-item:nth-child(5) {
-  background: #83B3D31F;
-}
 
 .container-item-blue {
   margin: 0 auto;
@@ -579,9 +579,12 @@ h4 {
   font-size: 18px;
   line-height: 23px;
   color: #333333;
-  width: 287px;
   margin: 0;
   padding: 0;
+}
+
+.select-sort {
+  width: 287px;
   margin-right: 81px;
 }
 
@@ -590,8 +593,10 @@ h4 {
 }
 
 .hotel-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  row-gap: 10px;
+  column-gap: 18px;
   width: 1056px;
   margin: 0 auto;
   padding: 0;
@@ -599,25 +604,48 @@ h4 {
 }
 
 .hotel-card {
-  width: 339px;
+  display: grid;
   padding: 20px;
+  row-gap: 16px;
 }
 
-.hotel-card+.hotel-card {
-  margin-right: 18px;
+.hotel-card-image {
+  object-fit: contain;
+  margin-bottom: 16px;
 }
 
 .hotel-card-title {
   font-size: 24px;
   line-height: 31px;
   text-align: left;
+  margin: 0;
 }
 
 .frame-hotel-price {
+  margin: 0;
   color: #333333;
 }
 
+.frame-button {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.frame-hotel {
+  display: inline-block;
+  width: 133px;
+  margin-right: 25px;
+}
+
+.frame-stars {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
 .rating {
+  width: 160px;
   color: #333333;
   background: #F2F2F2;
   font-size: 16px;
@@ -630,6 +658,7 @@ h4 {
   width: 1057px;
   margin: 0 auto;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .pagination-show-more {
@@ -644,9 +673,9 @@ h4 {
   display: flex;
   padding: 0;
   margin: 0;
+  margin-right: auto;
   list-style-type: none;
 }
-
 
 .pagination-item:not(:last-child) {
   margin-right: 8px;
@@ -658,13 +687,20 @@ h4 {
   justify-content: space-around;
   box-sizing: border-box;
   width: 55px;
-  height: 55px;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
-
 
 .pagination-current {
   color: #000000;
   background: #F2F2F2;
+}
+
+.select-number {
+  margin-left: 51px;
+  width: 160px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .newsletter-inner {
