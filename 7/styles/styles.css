@@ -142,12 +142,14 @@ h4 {
   font-weight: 700;
   color: #FFFFFF;
   text-transform: uppercase;
+  border: none;
+  cursor: pointer;
 }
-/* Не забыть убрать точку списка */
 
-.navigation .button-grey {
+.button .button-grey {
+  padding: 9px 15px 8px;
+  border-radius: 4px;
   font-size: 16px;
-  padding: 0;
   line-height: 20px;
   width: 160px;
 }
@@ -332,6 +334,7 @@ h4 {
   margin: 0 auto;
   padding: 15px;
   margin-bottom: 93px;
+  border-radius: 10px;
 }
 
 .search-hotel .button-grey {
@@ -372,8 +375,16 @@ h4 {
   margin-bottom: 94px;
 }
 
+.field-container {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+  /* https://itchief.ru/html-and-css/styling-text-input */
+}
+
 .field {
   color: #000000;
+  width: 600px;
 }
 
 .button-blue {
@@ -383,6 +394,7 @@ h4 {
 .button-newsletter {
   font-size: 20px;
   line-height: 26px;
+  width: 200px;
 }
 
 .page-footer-container {
