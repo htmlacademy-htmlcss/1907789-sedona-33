@@ -170,6 +170,10 @@ body {
   fill: #7562574D;
 }
 
+.navigation-link:active .count {
+  opacity: 0.3;
+}
+
 .count-favorites {
   position: absolute;
   top: 15px;
@@ -203,8 +207,8 @@ body {
   cursor: pointer;
   border-radius: 4px;
   box-sizing: border-box;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .button:active {
@@ -357,27 +361,26 @@ body {
 }
 
 .advices-title-housing::before {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 220px;
   content: url(../images/icon-housing.svg);
+  top: 89px;
 }
 
 .advices-title-eat::before {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 220px;
   content: url(../images/icon-eat.svg);
+  top: 91px;
 }
 
+.advices-title-gifts::before {
+  content: url(../images/icon-gifts.svg);
+  top: 85px;
+}
+
+.advices-title-housing::before,
+.advices-title-eat::before,
 .advices-title-gifts::before {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 220px;
-  content: url(../images/icon-gifts.svg);
 }
 
 .advices-title {
@@ -632,7 +635,7 @@ body {
 
 .footer-logo {
   width: 160px;
-  margin-left: auto;
+  margin-left: 140px;
   padding-top: 16px;
   padding-bottom: 16px;
 }
@@ -718,7 +721,7 @@ body {
 
 .inner-header {
   margin-left: 66px;
-  margin-bottom: 45px;
+  margin-bottom: 44px;
 }
 
 /* Хлебные крошки */
@@ -839,8 +842,21 @@ body {
   margin: 0 auto;
 }
 
+.catalog-filter-container-left {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog-filter-container-right {
+  width: 557px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+
 .catalog-filter-title {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -869,7 +885,7 @@ body {
 .catalog-filter-type {
   width: 180px;
   margin: 0;
-  margin-right: auto;
+  margin-right: 67px;
   padding: 0;
   border: 0;
 }
@@ -941,7 +957,11 @@ body {
   display: flex;
   justify-content: center;
   width: 287px;
-  margin-bottom: 31px;
+  margin-bottom: 28px;
+}
+
+.catalog-filter-price .catalog-filter-title {
+  margin-bottom: 34px;
 }
 
 .catalog-filter-label {
@@ -949,7 +969,7 @@ body {
   width: 50%;
   color: rgba(255, 255, 255, 0.3);
   justify-content: space-between;
-  padding: 12px 17px 10px;
+  padding: 11px 17px 10px;
   box-sizing: border-box;
 }
 
@@ -997,7 +1017,6 @@ body {
 .range-input:checked {
   background-color: #756257;
 }
-/* Не получаетс сделать это состояние */
 
 .catalog-filter-button {
   display: flex;
@@ -1063,7 +1082,7 @@ body {
   width: 1057px;
   display: flex;
   margin: 0 auto;
-  margin-bottom: 56px;
+  margin-bottom: 53px;
   align-items: center;
 }
 
@@ -1151,6 +1170,7 @@ body {
   background-image: url("../images/dropdown.svg");
   background-repeat: no-repeat;
   background-position: right 21px center;
+  background-color: #ffffff;
 }
 
 .select-control:hover {
@@ -1171,8 +1191,8 @@ body {
 
 .select-sort {
   width: 287px;
-  margin-right: 71px;
-  padding: 12px 19px;
+  margin-right: 81px;
+  padding: 11px 19px;
 }
 
 .filter-result {
@@ -1304,8 +1324,8 @@ a:focus:focus-visible .hotel-card-image {
   font-size: 16px;
   line-height: 21px;
   text-align: center;
-  padding-top: 9px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   text-transform: uppercase;
   margin-left: auto;
   border-radius: 4px;
@@ -1321,6 +1341,7 @@ a:focus:focus-visible .hotel-card-image {
 }
 
 .pagination-inner {
+  position: relative;
   display: flex;
   width: 1057px;
   margin: 0 auto;
@@ -1349,7 +1370,7 @@ a:focus:focus-visible .hotel-card-image {
   padding-bottom: 17px;
 }
 
-.pagination-show-more::after {
+.pagination-inner::before {
   display: block;
   position: absolute;
   content: "";
@@ -1357,7 +1378,7 @@ a:focus:focus-visible .hotel-card-image {
   background: #E6E6E6;
   width: 1056px;
   left: 0;
-  top: 90px;
+  top: -30px;
 }
 
 .pagination {
